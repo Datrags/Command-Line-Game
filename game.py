@@ -107,13 +107,6 @@ def mon_att(mon,p1,p2,p3,p4):
             p4.hp -= dmg
 
 
-# def mon_mve(mon,p1,p2,p3,p4,p5):
-    
-#     if mon.hp <= 0:
-#         print( 'You win!')
-#         alive = False
-#     else:
-#         mon_att(mon,p1,p2,p3,p4,p5)
 
 def player_status(person):
     print(person.name + " | HP = " + str(person.hp) + " | PP = " + str(person.pp))
@@ -195,7 +188,6 @@ def player_moves(player,mon,p2,p3,p4):
 
 def battle_system(p1,p2,p3,p4,mon):
     
-#    webbrowser.open(music_url,new=new)
     orginalhp = mon.hp
     alive = True
     while alive:

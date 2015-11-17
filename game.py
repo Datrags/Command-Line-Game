@@ -44,12 +44,12 @@ rock = Enemy('Rock',5,10)
 mushroom = Enemy('Mushroom',10, 400)
 posion_mushroom = Enemy('Dark Mushroom',25,600)
 def heal(person):
-    if p1.pp > 0:
+    if person.pp > 0:
         recovered = (person.mp + person.attack) * 0.5
         person.pp -= 5
         return round(recovered)
     else:
-        print p1.name + ' is out of PP.'
+        print person.name + ' is out of PP.'
 def action_statement(person, action):
     print person.name,action+'!'
 def att(p1):
@@ -234,7 +234,7 @@ def area(area,num_floors,boss):
             battle_system(figaro,jugalo,eagalo,randalo,boss)
             place = False
         else:
-            direction = raw_input('Up/Down/Left/Right')
+            direction = raw_input('Type in the first letter of Up/Down/Left/Right to move.')
             
             if direction == 'up' or direction == 'u':
                 print 'Your team moved up'
